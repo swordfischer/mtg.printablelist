@@ -1,0 +1,63 @@
+	* { margin: 0; padding: 0; }
+	@font-face {
+		font-family: "Beleren";
+		src: url('beleren-bold-webfont.ttf');
+	}
+	body {
+		font-family: 'Beleren', sans-serif;
+		font-weight: 100;
+		width: 210mm;
+	}
+	div.col1, div.col2 {
+		width: 68mm;
+		float: left;
+	}
+
+        div.symbol, div.set, div.date, div.fullinfo {
+		                display: inline-block;
+				        }
+
+
+	div.container {
+		width: 68mm;
+		float: left;
+		height: 9mm;
+		overflow: hidden;
+	}
+	div.symbol {
+		width: 12mm;
+		height: 9mm;
+	}
+	div.symbol img {	
+		height: 100%;
+	}
+	div.fullinfo {
+		width: 54mm;
+		height: 9mm;
+		vertical-align: top;
+	}
+	div.set {
+		height: 5mm;
+		width: 100%;
+		overflow: hidden;
+       	}
+	div.set p {
+		font-size: 13pt;
+	}
+	div.date {
+		height: 3mm;
+	}
+	div.date p {
+		font-size: 8pt;
+		line-height: 4mm;
+		color: #777;
+	}
+	div.ruler {
+		height: 9mm;
+		width: 9mm;
+		float: left;
+		margin: 0 1mm;
+		border-left: 1px solid #AEAEAE;
+		border-right: 1px solid #AEAEAE;
+		border-bottom: 1px solid #AEAEAE;
+	}
