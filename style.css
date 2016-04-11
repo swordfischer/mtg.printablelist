@@ -11,18 +11,12 @@ body {
 	width: 210mm;
 }
 
-div.col1, div.col2 {
-	width: 68mm;
-	float: left;
-
-}
-
 div.symbol, div.set, div.date, div.fullinfo {
         display: inline-block;
         }
 
 div.container {
-	width: 70mm;
+	width: 67mm;
 	float: left;
 	height: 9mm;
 	overflow: hidden;
@@ -38,7 +32,7 @@ div.symbol img {
 }
 
 div.fullinfo {
-	width: 56mm;
+	width: 53mm;
 	height: 9mm;
 	vertical-align: top;
 }
