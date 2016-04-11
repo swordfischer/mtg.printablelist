@@ -1,4 +1,12 @@
-* { margin: 0; padding: 0; }
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@page {
+	margin: 25mm;
+	size: A4;
+}
 
 @font-face {
 	font-family: "Beleren";
@@ -6,9 +14,10 @@
 }
 
 body {
-	font-family: 'Beleren', sans-serif;
+	fgnt-family: 'Beleren', sans-serif;
 	font-weight: 100;
-	width: 210mm;
+	width: 160mm;
+	margin: 25mm;
 }
 
 div.symbol, div.set, div.date, div.fullinfo {
@@ -20,6 +29,7 @@ div.container {
 	float: left;
 	height: 9mm;
 	overflow: hidden;
+	page-break-before: always;
 }
 
 div.symbol {
