@@ -14,7 +14,7 @@
 }
 
 body {
-	fgnt-family: 'Beleren', sans-serif;
+	font-family: 'Beleren', sans-serif;
 	font-weight: 100;
 	width: 160mm;
 }
@@ -28,7 +28,7 @@ div.container {
 	float: left;
 	height: 9mm;
 	overflow: hidden;
-	page-break-before: always;
+	page-break-after: always;
 }
 
 div.symbol {
