@@ -28,7 +28,6 @@ div.container {
 	float: left;
 	height: 9mm;
 	overflow: hidden;
-	page-break-after: always;
 }
 
 div.symbol {
