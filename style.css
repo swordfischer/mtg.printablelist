@@ -19,7 +19,7 @@ body {
 	width: 160mm;
 }
 
-div.symbol, div.set, div.date, div.fullinfo {
+div.symbol, div.fullinfo {
         display: inline-block;
         }
 
