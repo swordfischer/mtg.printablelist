@@ -1,5 +1,6 @@
 from BeautifulSoup import BeautifulSoup
 import urllib2
+import re
 
 html = '''
 <!DOCTYPE html>
@@ -27,26 +28,27 @@ mtg_list = []
 divs = soup.findAll("div", { "class" : "card-set-archive-table" })
 
 for div in divs:
-    for li in div.findAll("li"):
-        if li['class'] != 'title':
-            try:
-                mtg_icon = li.find("span", {"class" : "icon"}).img['src']
-            except (NameError, TypeError):
-                mtg_icon = 'none.png'
-            try:
-                mtg_set = li.find("span", {"class" : "nameSet"}).text
-            except (NameError, TypeError):
-                mtg_set = 'N/A'
-            try:
-                mtg_date = li.find("span", {"class" : "releaseDate"}).text
-            except (NameError, TypeError):
-                mtg_date = 'N/A'
-            mtg_list.append({
-                'icon': mtg_icon,
-                'set': mtg_set,
-                'date':mtg_date
-            })
-
+    if div.parent.get('id') != 'magic-online-products':
+        for li in div.findAll("li"):
+            if li['class'] != 'title':
+                try:
+                    mtg_icon = li.find("span", {"class" : "icon"}).img['src']
+                except (NameError, TypeError):
+                    mtg_icon = 'none.png'
+                try:
+                    mtg_set = li.find("span", {"class" : "nameSet"}).text
+                except (NameError, TypeError):
+                    mtg_set = 'N/A'
+                try:
+                    mtg_date = li.find("span", {"class" : "releaseDate"}).text
+                except (NameError, TypeError):
+                    mtg_date = 'N/A'
+                if re.match('World Champ', mtg_set) is None:
+                    mtg_list.append({
+                        'icon': mtg_icon,
+                        'set': mtg_set,
+                        'date':mtg_date
+                    })
 
 items = []
 for item in mtg_list:
