@@ -30,9 +30,14 @@ div.container {
 	overflow: hidden;
 }
 
+.ss {
+	font-size: 8mm;
+}
+
 div.symbol {
 	width: 12mm;
 	height: 9mm;
+	text-align: center;
 }
 
 div.symbol img {	
@@ -53,6 +58,13 @@ div.set {
 
 div.set p {
 	font-size: 11pt;
+}
+
+div.color {
+	height: 9mm;
+	line-height: 9mm;
+	width: 100%;
+	overflow: hidden;
 }
 
 div.date {
